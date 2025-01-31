@@ -11,7 +11,8 @@ import {
 } from '@/components/ui/table';
 import { formatCurrency, formatDateTime, formatId } from '@/lib/utils';
 import { Order } from '@/types';
-import { Table, Link } from 'lucide-react';
+import { Table } from '@/components/ui/table';
+import Link from 'next/link';
 import Image from 'next/image';
 
 const OrderDetailsTable = ({ order }: { order: Order }) => {
