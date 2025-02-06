@@ -116,6 +116,11 @@ export const config = {
         token.name = session.user.name;
       }
 
+      // Handle session updates
+      if (session?.user.role && trigger === 'update') {
+        token.name = session.user.name;
+      }
+
       return token;
     },
   },
