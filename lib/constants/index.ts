@@ -32,7 +32,7 @@ export const shippingAddressDefaultValues = {
 };
 
 export const PAYMENT_METHODS = process.env.PAYMENT_METHODS
-  ? process.env.PAYMENT_METHODS.split(',')
+  ? process.env.PAYMENT_METHODS.split(',').map((method) => method.trim())
   : ['PayPal', 'Stripe', 'CashOnDelivery'];
 
 export const DEFAULT_PAYMENT_METHOD =
